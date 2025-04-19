@@ -30,9 +30,9 @@
     register: mysql_info
     ignore_errors: true
 
-  # - name: print the output
-  #   ansible.builtin.debug:
-  #     msg: "MySQL info: {{ mysql_info }}"
+  - name: print the output
+    ansible.builtin.debug:
+      msg: "MySQL info: {{ mysql_info }}"
 
   # - name: setup root password
   #   ansible.builtin.command: " mysql_secure_installation --set-root-pass {{ mysql_root_password }} "
