@@ -9,7 +9,6 @@
       name: "{{ item }}"
       executable: pip3.9
     loop:
-    - cryptography
     - PyMySQL
 
   - name: Install MySQL server
@@ -27,7 +26,7 @@
     community.mysql.mysql_info:
       login_user: root
       login_password: "{{ mysql_root_password }}"
-      login_host: mysql.daws82s.online
+      login_host: ansible-node.vijaychandra.site
     register: mysql_info
     ignore_errors: true
 
